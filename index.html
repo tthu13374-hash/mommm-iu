@@ -1,0 +1,2294 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mẹ yêu - Chúc mừng sinh nhật mẹ 💗</title>
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left, #ffd6e7, transparent 35%),
+        radial-gradient(circle at bottom right, #ffc1dc, transparent 35%),
+        linear-gradient(135deg, #fff0f6, #ffe0ec, #fff5fa);
+    color: #7b2148;
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   CANVAS
+========================================================= */
+
+#fireworks {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+/* =========================================================
+   BACKGROUND HEARTS
+========================================================= */
+
+.background-heart {
+    position: fixed;
+    color: rgba(255, 90, 150, 0.15);
+    font-size: 30px;
+    animation: floatBackground 10s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes floatBackground {
+
+    0% {
+        transform: translateY(110vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-20vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =========================================================
+   MUSIC BUTTON
+========================================================= */
+
+.music-button {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+
+    width: 58px;
+    height: 58px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #ff4f91, #ff8fbd);
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(255, 55, 130, 0.35);
+
+    transition: 0.3s;
+}
+
+.music-button:hover {
+    transform: scale(1.12) rotate(10deg);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    border-radius: 50%;
+
+    filter: blur(5px);
+
+    top: -200px;
+    left: -200px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    background: rgba(255, 110, 170, 0.15);
+
+    border-radius: 50%;
+
+    bottom: -200px;
+    right: -150px;
+
+    filter: blur(20px);
+}
+
+.small-title {
+    font-size: 20px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+    animation: fadeDown 1.5s ease;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 9vw, 95px);
+
+    line-height: 1.1;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d91d68,
+            #ff4f91,
+            #ff9ac4,
+            #d91d68
+        );
+
+    background-size: 300%;
+
+    -webkit-background-clip: text;
+    color: transparent;
+
+    animation:
+        gradientText 5s infinite,
+        titleAppear 1.5s ease;
+}
+
+.hero h2 {
+    margin-top: 20px;
+
+    font-size: clamp(24px, 4vw, 45px);
+
+    color: #a5285d;
+
+    animation: fadeUp 2s ease;
+}
+
+.hero-description {
+    max-width: 750px;
+
+    margin-top: 25px;
+
+    font-size: 19px;
+    line-height: 1.8;
+
+    color: #873050;
+
+    animation: fadeUp 2.5s ease;
+}
+
+@keyframes gradientText {
+
+    0% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
+
+@keyframes titleAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================================
+   BIRTHDAY BADGE
+========================================================= */
+
+.birthday-badge {
+    margin-top: 35px;
+
+    padding: 14px 28px;
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border: 1px solid rgba(255, 100, 160, 0.3);
+
+    box-shadow:
+        0 10px 30px rgba(150, 30, 80, 0.12);
+
+    backdrop-filter: blur(10px);
+
+    font-weight: bold;
+
+    animation: pulseBadge 2s infinite;
+}
+
+@keyframes pulseBadge {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+.scroll-down {
+    position: absolute;
+
+    bottom: 25px;
+
+    font-size: 30px;
+
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(12px);
+    }
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+section {
+    position: relative;
+    z-index: 3;
+
+    padding: 100px 20px;
+}
+
+.section-title {
+    text-align: center;
+
+    font-size: clamp(30px, 5vw, 52px);
+
+    margin-bottom: 20px;
+
+    color: #a5255a;
+}
+
+.section-subtitle {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #8b4963;
+}
+
+/* =========================================================
+   LETTER
+========================================================= */
+
+.letter-section {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.letter {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 55px 45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.95),
+            rgba(255,240,247,0.95)
+        );
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 70px rgba(130, 25, 70, 0.15);
+
+    border: 1px solid rgba(255, 120, 170, 0.25);
+
+    position: relative;
+}
+
+.letter::before {
+    content: "💗";
+
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    font-size: 35px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.2);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.letter h3 {
+    text-align: center;
+
+    font-size: 30px;
+
+    margin-bottom: 30px;
+
+    color: #d52a6c;
+}
+
+.letter p {
+    font-size: 18px;
+
+    line-height: 2;
+
+    margin-bottom: 18px;
+
+    text-align: justify;
+}
+
+.signature {
+    text-align: right;
+
+    margin-top: 35px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #d42b6e;
+}
+
+/* =========================================================
+   MEMORY CARDS
+========================================================= */
+
+.memory-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: 25px;
+}
+
+.memory-card {
+    padding: 35px 25px;
+
+    background: rgba(255,255,255,0.7);
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 40px rgba(120, 30, 70, 0.1);
+
+    border: 1px solid rgba(255,120,170,0.2);
+
+    transition: 0.4s;
+
+    transform: translateY(0);
+}
+
+.memory-card:hover {
+    transform: translateY(-12px) rotate(1deg);
+
+    box-shadow:
+        0 25px 50px rgba(160, 30, 90, 0.18);
+}
+
+.memory-icon {
+    font-size: 55px;
+
+    margin-bottom: 20px;
+}
+
+.memory-card h3 {
+    margin-bottom: 15px;
+
+    color: #bb275e;
+
+    font-size: 23px;
+}
+
+.memory-card p {
+    line-height: 1.7;
+
+    color: #86516a;
+}
+
+/* =========================================================
+   REASONS
+========================================================= */
+
+.reasons {
+    max-width: 950px;
+
+    margin: auto;
+}
+
+.reason {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    background: rgba(255,255,255,0.65);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(120, 30, 70, 0.08);
+
+    transition: 0.3s;
+}
+
+.reason:hover {
+    transform: translateX(10px);
+}
+
+.reason-number {
+    min-width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f91,
+            #ff9fc5
+        );
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 20px;
+}
+
+.reason-text {
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+/* =========================================================
+   GIFT
+========================================================= */
+
+.gift-section {
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,160,200,0.35),
+            transparent 60%
+        );
+}
+
+.gift-box {
+    position: relative;
+
+    width: 210px;
+    height: 170px;
+
+    margin: 80px auto 40px;
+
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+.gift-box:hover {
+    transform: scale(1.08);
+}
+
+.gift-body {
+    position: absolute;
+
+    bottom: 0;
+
+    width: 210px;
+    height: 130px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4d91,
+            #ff8bb8
+        );
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 20px 40px rgba(210, 30, 100, 0.25);
+}
+
+.gift-lid {
+    position: absolute;
+
+    top: 20px;
+    left: -10px;
+
+    width: 230px;
+    height: 45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff327d,
+            #ff75a8
+        );
+
+    border-radius: 8px;
+
+    z-index: 3;
+
+    transition: 0.7s;
+}
+
+.gift-ribbon-v {
+    position: absolute;
+
+    left: 88px;
+
+    bottom: 0;
+
+    width: 34px;
+    height: 130px;
+
+    background: #ffd166;
+
+    z-index: 2;
+}
+
+.gift-ribbon-h {
+    position: absolute;
+
+    left: -10px;
+    top: 20px;
+
+    width: 230px;
+    height: 45px;
+
+    background: #ffd166;
+
+    z-index: 4;
+}
+
+.bow {
+    position: absolute;
+
+    top: -15px;
+
+    left: 75px;
+
+    z-index: 5;
+
+    font-size: 60px;
+
+    transition: 0.7s;
+}
+
+.gift-open .gift-lid {
+    transform:
+        translateY(-100px)
+        rotate(-8deg);
+}
+
+.gift-open .bow {
+    transform:
+        translateY(-100px)
+        rotate(-15deg);
+}
+
+.gift-message {
+    max-width: 800px;
+
+    margin: 40px auto;
+
+    padding: 35px;
+
+    background: rgba(255,255,255,0.85);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 50px rgba(120, 30, 70, 0.12);
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition: 1s;
+
+    pointer-events: none;
+}
+
+.gift-message.show {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+}
+
+.gift-message h3 {
+    font-size: 32px;
+
+    color: #d3296d;
+
+    margin-bottom: 20px;
+}
+
+.gift-message p {
+    font-size: 18px;
+
+    line-height: 1.9;
+}
+
+/* =========================================================
+   PHOTO AREA
+========================================================= */
+
+.photo-section {
+    background: rgba(255,255,255,0.3);
+}
+
+.photo-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 25px;
+}
+
+.photo-card {
+    min-height: 280px;
+
+    border-radius: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd4e5,
+            #fff0f6
+        );
+
+    border:
+        2px dashed rgba(215, 40, 105, 0.3);
+
+    font-size: 18px;
+
+    transition: 0.4s;
+
+    overflow: hidden;
+}
+
+.photo-card:hover {
+    transform: scale(1.03);
+}
+
+.photo-card .photo-icon {
+    font-size: 70px;
+
+    margin-bottom: 20px;
+}
+
+.photo-card span {
+    padding: 0 20px;
+
+    line-height: 1.6;
+}
+
+/* =========================================================
+   WISHES
+========================================================= */
+
+.wishes-box {
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.wish {
+    font-size: 22px;
+
+    line-height: 1.8;
+
+    margin: 25px 0;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition: 1s;
+}
+
+.wish.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final-section {
+    min-height: 90vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,180,210,0.5),
+            transparent 65%
+        );
+}
+
+.final-heart {
+    font-size: 110px;
+
+    animation: heartbeat 1.5s infinite;
+
+    margin-bottom: 25px;
+}
+
+.final-section h2 {
+    font-size: clamp(38px, 7vw, 75px);
+
+    color: #cf2366;
+
+    margin-bottom: 25px;
+}
+
+.final-section p {
+    max-width: 800px;
+
+    font-size: 20px;
+
+    line-height: 1.9;
+
+    color: #7e3b57;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: rgba(190, 35, 100, 0.08);
+
+    color: #9a4566;
+}
+
+footer strong {
+    color: #cf2366;
+}
+
+/* =========================================================
+   FLOATING HEART
+========================================================= */
+
+.floating-heart {
+    position: fixed;
+
+    bottom: -50px;
+
+    font-size: 25px;
+
+    pointer-events: none;
+
+    z-index: 998;
+
+    animation:
+        heartFly 5s linear forwards;
+}
+
+@keyframes heartFly {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(0.5);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(360deg)
+            scale(1.5);
+
+        opacity: 0;
+    }
+}
+
+/* =========================================================
+   SPARKLES
+========================================================= */
+
+.sparkle {
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 997;
+
+    animation: sparkleAnim 1s ease forwards;
+}
+
+@keyframes sparkleAnim {
+
+    0% {
+        transform: scale(0);
+
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0);
+
+        opacity: 0;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .letter {
+        padding: 35px 22px;
+    }
+
+    .letter p {
+        font-size: 16px;
+    }
+
+    .reason {
+        align-items: flex-start;
+    }
+
+    .reason-number {
+        min-width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .reason-text {
+        font-size: 15px;
+    }
+
+    .music-button {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+
+    section {
+        padding: 75px 15px;
+    }
+
+}
+
+/* =========================================================
+   EXTRA ANIMATIONS
+========================================================= */
+
+.fade-in {
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.fade-in.active {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.glow {
+    animation: glowAnimation 2s infinite;
+}
+
+@keyframes glowAnimation {
+
+    0% {
+        box-shadow:
+            0 0 10px rgba(255,100,160,0.2);
+    }
+
+    50% {
+        box-shadow:
+            0 0 35px rgba(255,100,160,0.5);
+    }
+
+    100% {
+        box-shadow:
+            0 0 10px rgba(255,100,160,0.2);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     FIREWORK CANVAS
+===================================================== -->
+
+<canvas id="fireworks"></canvas>
+
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
+<audio id="birthdayMusic" loop preload="auto">
+    <source src="mashup-me-yeu.mp3" type="audio/mpeg">
+</audio>
+
+<button
+    class="music-button"
+    id="musicButton"
+    title="Bật / tắt nhạc">
+    🎵
+</button>
+
+<!-- =====================================================
+     BACKGROUND HEARTS
+===================================================== -->
+
+<div class="background-heart" style="left:5%; animation-delay:0s;">♡</div>
+<div class="background-heart" style="left:15%; animation-delay:2s;">♡</div>
+<div class="background-heart" style="left:27%; animation-delay:4s;">♡</div>
+<div class="background-heart" style="left:38%; animation-delay:1s;">♡</div>
+<div class="background-heart" style="left:52%; animation-delay:5s;">♡</div>
+<div class="background-heart" style="left:64%; animation-delay:3s;">♡</div>
+<div class="background-heart" style="left:76%; animation-delay:6s;">♡</div>
+<div class="background-heart" style="left:89%; animation-delay:2s;">♡</div>
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="hero">
+
+    <div class="small-title">
+        🌷 MỘT NGÀY ĐẶC BIỆT 🌷
+    </div>
+
+    <h1>
+        MẸ IU 💗
+    </h1>
+
+    <h2>
+        CHÚC MỪNG SINH NHẬT MẸ
+    </h2>
+
+    <p class="hero-description">
+        Hôm nay không chỉ là một ngày sinh nhật bình thường...
+        mà là ngày để con nói với mẹ rằng:
+        <strong>con yêu mẹ rất nhiều!</strong>
+    </p>
+
+    <div class="birthday-badge">
+        🎂 Happy Birthday To My Wonderful Mom 🎂
+    </div>
+
+    <div class="scroll-down">
+        ↓
+    </div>
+
+</header>
+
+<!-- =====================================================
+     LETTER
+===================================================== -->
+
+<section class="letter-section">
+
+    <h2 class="section-title">
+        💌 Gửi mẹ yêu của con
+    </h2>
+
+    <p class="section-subtitle">
+        Có những điều con muốn nói với mẹ từ rất lâu,
+        nhưng đôi khi lại chẳng biết bắt đầu từ đâu.
+        Hôm nay con viết tất cả vào đây nhé...
+    </p>
+
+    <div class="letter fade-in">
+
+        <h3>
+            Mẹ yêu à... 💗
+        </h3>
+
+        <p>
+            Hôm nay là một ngày thật đặc biệt,
+            bởi vì đây là ngày người phụ nữ tuyệt vời nhất
+            trong cuộc đời con được sinh ra.
+        </p>
+
+        <p>
+            Con biết rằng có rất nhiều điều mẹ đã làm cho con
+            mà con chưa từng nói lời cảm ơn.
+            Những bữa cơm mẹ nấu,
+            những lần mẹ thức khuya chờ con,
+            những lúc mẹ lo lắng khi con bệnh,
+            những lời nhắc nhở tưởng như rất bình thường
+            nhưng lại luôn xuất phát từ tình yêu thương.
+        </p>
+
+        <p>
+            Cảm ơn mẹ vì đã luôn ở bên con.
+            Cảm ơn mẹ vì đã luôn cố gắng,
+            luôn hy sinh và luôn dành cho gia đình
+            những điều tốt đẹp nhất.
+        </p>
+
+        <p>
+            Có thể đôi lúc con chưa ngoan,
+            đôi lúc con làm mẹ buồn,
+            đôi lúc con vô tình khiến mẹ phải lo lắng.
+            Nhưng mẹ ơi,
+            con luôn yêu mẹ rất nhiều.
+        </p>
+
+        <p>
+            Con mong rằng tuổi mới của mẹ sẽ có thật nhiều
+            sức khỏe, niềm vui và những ngày tháng thật bình yên.
+            Mong cho nụ cười của mẹ luôn ở trên môi.
+            Mong mọi điều tốt đẹp nhất sẽ đến với mẹ.
+        </p>
+
+        <p>
+            Sau này dù con có lớn đến đâu,
+            đi xa đến đâu,
+            thì trong lòng con,
+            mẹ vẫn luôn là người quan trọng nhất.
+        </p>
+
+        <p>
+            <strong>
+                Chúc mừng sinh nhật mẹ yêu!
+                Con yêu mẹ rất rất nhiều! 💗
+            </strong>
+        </p>
+
+        <div class="signature">
+            — Con của mẹ 🌷
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     MEMORY
+===================================================== -->
+
+<section>
+
+    <h2 class="section-title">
+        🌸 Những điều con nhớ về mẹ
+    </h2>
+
+    <p class="section-subtitle">
+        Có những kỷ niệm rất nhỏ,
+        nhưng khi nhớ lại thì lại thấy vô cùng ấm áp.
+    </p>
+
+    <div class="memory-grid">
+
+        <div class="memory-card fade-in">
+            <div class="memory-icon">
+                🍚
+            </div>
+
+            <h3>
+                Những bữa cơm
+            </h3>
+
+            <p>
+                Có lẽ sau này con sẽ được ăn rất nhiều
+                món ngon khác nhau,
+                nhưng chẳng có bữa cơm nào
+                mang lại cảm giác giống như cơm mẹ nấu.
+            </p>
+        </div>
+
+        <div class="memory-card fade-in">
+            <div class="memory-icon">
+                🌙
+            </div>
+
+            <h3>
+                Những đêm mẹ chờ
+            </h3>
+
+            <p>
+                Dù con về muộn,
+                mẹ vẫn thường thức để chờ.
+                Chỉ một câu hỏi "về rồi hả con?"
+                cũng đủ khiến con cảm thấy mình được yêu thương.
+            </p>
+        </div>
+
+        <div class="memory-card fade-in">
+            <div class="memory-icon">
+                🫶
+            </div>
+
+            <h3>
+                Những lời nhắc nhở
+            </h3>
+
+            <p>
+                Có những lúc con thấy mẹ nói nhiều,
+                nhưng lớn lên rồi con mới hiểu
+                phía sau mỗi lời nhắc nhở
+                đều là sự quan tâm.
+            </p>
+        </div>
+
+        <div class="memory-card fade-in">
+            <div class="memory-icon">
+                🏡
+            </div>
+
+            <h3>
+                Mái nhà
+            </h3>
+
+            <p>
+                Nhà không chỉ là một nơi để trở về.
+                Nhà là nơi có mẹ,
+                có những điều thân thuộc
+                và có cảm giác bình yên nhất.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     REASONS
+===================================================== -->
+
+<section>
+
+    <h2 class="section-title">
+        💖 Con yêu mẹ vì...
+    </h2>
+
+    <p class="section-subtitle">
+        Không phải chỉ có một lý do.
+        Có rất nhiều, rất nhiều lý do...
+    </p>
+
+    <div class="reasons">
+
+        <div class="reason fade-in">
+            <div class="reason-number">01</div>
+
+            <div class="reason-text">
+                Vì mẹ luôn yêu thương con ngay cả khi con chưa hoàn hảo.
+            </div>
+        </div>
+
+        <div class="reason fade-in">
+            <div class="reason-number">02</div>
+
+            <div class="reason-text">
+                Vì mẹ luôn tin tưởng con ngay cả khi chính con đôi lúc nghi ngờ bản thân.
+            </div>
+        </div>
+
+        <div class="reason fade-in">
+            <div class="reason-number">03</div>
+
+            <div class="reason-text">
+                Vì mẹ luôn cố gắng dành cho gia đình những điều tốt nhất.
+            </div>
+        </div>
+
+        <div class="reason fade-in">
+            <div class="reason-number">04</div>
+
+            <div class="reason-text">
+                Vì mẹ luôn là người con có thể tìm về khi con mệt mỏi.
+            </div>
+        </div>
+
+        <div class="reason fade-in">
+            <div class="reason-number">05</div>
+
+            <div class="reason-text">
+                Vì mẹ luôn đặt hạnh phúc của gia đình lên trên rất nhiều điều khác.
+            </div>
+        </div>
+
+        <div class="reason fade-in">
+            <div class="reason-number">06</div>
+
+            <div class="reason-text">
+                Vì chỉ cần nhìn thấy mẹ cười, con cũng cảm thấy vui theo.
+            </div>
+        </div>
+
+        <div class="reason fade-in">
+            <div class="reason-number">07</div>
+
+            <div class="reason-text">
+                Vì mẹ là người đặc biệt mà không ai có thể thay thế trong cuộc đời con.
+            </div>
+        </div>
+
+        <div class="reason fade-in">
+            <div class="reason-number">08</div>
+
+            <div class="reason-text">
+                Và đơn giản nhất... vì mẹ là mẹ của con. 💗
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     GIFT
+===================================================== -->
+
+<section class="gift-section">
+
+    <h2 class="section-title">
+        🎁 Một món quà nhỏ dành cho mẹ
+    </h2>
+
+    <p class="section-subtitle">
+        Mẹ hãy nhấn vào hộp quà nhé...
+        bên trong có một điều con muốn gửi đến mẹ. 💗
+    </p>
+
+    <div
+        class="gift-box"
+        id="giftBox">
+
+        <div class="bow">
+            🎀
+        </div>
+
+        <div class="gift-lid"></div>
+
+        <div class="gift-body">
+
+            <div class="gift-ribbon-v"></div>
+
+        </div>
+
+        <div class="gift-ribbon-h"></div>
+
+    </div>
+
+    <div
+        class="gift-message"
+        id="giftMessage">
+
+        <h3>
+            🎉 Bất ngờ dành cho mẹ! 🎉
+        </h3>
+
+        <p>
+            Món quà lớn nhất mà con muốn dành cho mẹ
+            không phải là một món đồ đắt tiền.
+        </p>
+
+        <p>
+            Con chỉ mong mẹ luôn khỏe mạnh,
+            luôn vui vẻ,
+            luôn có thật nhiều tiếng cười
+            và luôn cảm thấy hạnh phúc.
+        </p>
+
+        <p>
+            Con sẽ cố gắng trưởng thành,
+            cố gắng học tập,
+            cố gắng trở thành một người tốt
+            để mẹ có thể tự hào về con.
+        </p>
+
+        <p>
+            <strong>
+                Mẹ hãy luôn ở bên con thật lâu thật lâu nhé! 💗
+            </strong>
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     PHOTO SECTION
+===================================================== -->
+
+<section class="photo-section">
+
+    <h2 class="section-title">
+        📸 Góc kỷ niệm của mẹ và con
+    </h2>
+
+    <p class="section-subtitle">
+        Bà có thể thay những ô bên dưới bằng ảnh thật
+        của mẹ và gia đình.
+    </p>
+
+    <div class="photo-grid">
+
+        <div class="photo-card">
+
+            <div class="photo-icon">
+                👩‍👧
+            </div>
+
+            <span>
+                Khoảnh khắc mẹ và con
+            </span>
+
+        </div>
+
+        <div class="photo-card">
+
+            <div class="photo-icon">
+                👩‍👧‍👦
+            </div>
+
+            <span>
+                Những khoảnh khắc gia đình
+            </span>
+
+        </div>
+
+        <div class="photo-card">
+
+            <div class="photo-icon">
+                🌷
+            </div>
+
+            <span>
+                Một ngày thật đẹp bên mẹ
+            </span>
+
+        </div>
+
+        <div class="photo-card">
+
+            <div class="photo-icon">
+                💗
+            </div>
+
+            <span>
+                Kỷ niệm mà con luôn trân trọng
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     WISHES
+===================================================== -->
+
+<section>
+
+    <h2 class="section-title">
+        🌷 Những lời chúc dành cho mẹ
+    </h2>
+
+    <div class="wishes-box">
+
+        <p class="wish">
+            🌸 Chúc mẹ luôn mạnh khỏe và bình an.
+        </p>
+
+        <p class="wish">
+            🌸 Chúc mẹ mỗi ngày đều có thật nhiều niềm vui.
+        </p>
+
+        <p class="wish">
+            🌸 Chúc mẹ luôn giữ được nụ cười thật đẹp.
+        </p>
+
+        <p class="wish">
+            🌸 Chúc những điều mẹ mong ước đều dần trở thành hiện thực.
+        </p>
+
+        <p class="wish">
+            🌸 Chúc mẹ luôn được yêu thương và trân trọng.
+        </p>
+
+        <p class="wish">
+            🌸 Chúc gia đình mình luôn hạnh phúc và ở bên nhau thật lâu.
+        </p>
+
+        <p class="wish">
+            🌸 Và đặc biệt...
+            chúc mẹ có một sinh nhật thật thật vui! 🎂
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     FINAL
+===================================================== -->
+
+<section class="final-section">
+
+    <div class="final-heart">
+        💗
+    </div>
+
+    <h2>
+        HAPPY BIRTHDAY MOM!
+    </h2>
+
+    <p>
+        Mẹ là món quà tuyệt vời nhất mà cuộc đời đã dành cho con.
+        Cảm ơn mẹ vì tất cả những gì mẹ đã làm,
+        vì tất cả những yêu thương mẹ đã dành cho con.
+    </p>
+
+    <p style="margin-top:25px;">
+        Con không biết tương lai sẽ như thế nào,
+        nhưng con biết rằng ở bất kỳ đâu,
+        con vẫn luôn yêu mẹ.
+    </p>
+
+    <p style="margin-top:25px; font-size:28px;">
+        <strong>
+            MẸ IU CỦA CON 💗
+        </strong>
+    </p>
+
+    <p style="margin-top:15px;">
+        🎂 Chúc mừng sinh nhật mẹ! 🎂
+    </p>
+
+</section>
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+        Made with 💗 for
+        <strong>mẹ yêu</strong>
+    </p>
+
+    <p style="margin-top:10px;">
+        🎀 Một món quà nhỏ từ con 🎀
+    </p>
+
+</footer>
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =========================================================
+   MUSIC
+========================================================= */
+
+const music =
+    document.getElementById("birthdayMusic");
+
+const musicButton =
+    document.getElementById("musicButton");
+
+let musicPlaying = false;
+
+musicButton.addEventListener(
+    "click",
+    function() {
+
+        if (!musicPlaying) {
+
+            music.play()
+                .then(function() {
+
+                    musicPlaying = true;
+
+                    musicButton.innerHTML = "🔊";
+
+                })
+                .catch(function(error) {
+
+                    alert(
+                        "Mẹo nhỏ: hãy đặt file mashup-me-yeu.mp3 cùng thư mục với index.html nhé 💗"
+                    );
+
+                });
+
+        } else {
+
+            music.pause();
+
+            musicPlaying = false;
+
+            musicButton.innerHTML = "🎵";
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   CREATE FLOATING HEARTS
+========================================================= */
+
+function createHeart() {
+
+    const heart =
+        document.createElement("div");
+
+    heart.className =
+        "floating-heart";
+
+    const hearts = [
+        "💗",
+        "💖",
+        "💕",
+        "💞",
+        "💓",
+        "🌸",
+        "🌷",
+        "✨"
+    ];
+
+    heart.innerHTML =
+        hearts[
+            Math.floor(
+                Math.random() * hearts.length
+            )
+        ];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (18 + Math.random() * 30) + "px";
+
+    heart.style.animationDuration =
+        (4 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(
+        function() {
+            heart.remove();
+        },
+        9000
+    );
+
+}
+
+setInterval(createHeart, 650);
+
+
+/* =========================================================
+   SPARKLES
+========================================================= */
+
+document.addEventListener(
+    "mousemove",
+    function(event) {
+
+        if (Math.random() > 0.82) {
+
+            const sparkle =
+                document.createElement("div");
+
+            sparkle.className =
+                "sparkle";
+
+            sparkle.innerHTML =
+                "✨";
+
+            sparkle.style.left =
+                event.clientX + "px";
+
+            sparkle.style.top =
+                event.clientY + "px";
+
+            document.body.appendChild(sparkle);
+
+            setTimeout(
+                function() {
+                    sparkle.remove();
+                },
+                1000
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const observer =
+    new IntersectionObserver(
+        function(entries) {
+
+            entries.forEach(
+                function(entry) {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target.classList.add(
+                            "active"
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+
+document
+    .querySelectorAll(".fade-in")
+    .forEach(
+        function(element) {
+
+            observer.observe(element);
+
+        }
+    );
+
+
+/* =========================================================
+   WISH REVEAL
+========================================================= */
+
+const wishes =
+    document.querySelectorAll(".wish");
+
+const wishObserver =
+    new IntersectionObserver(
+        function(entries) {
+
+            entries.forEach(
+                function(entry) {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        const index =
+                            Array.from(
+                                wishes
+                            ).indexOf(
+                                entry.target
+                            );
+
+                        setTimeout(
+                            function() {
+
+                                entry.target.classList.add(
+                                    "visible"
+                                );
+
+                            },
+                            index * 300
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold: 0.2
+        }
+    );
+
+
+wishes.forEach(
+    function(wish) {
+
+        wishObserver.observe(wish);
+
+    }
+);
+
+
+/* =========================================================
+   GIFT
+========================================================= */
+
+const giftBox =
+    document.getElementById("giftBox");
+
+const giftMessage =
+    document.getElementById("giftMessage");
+
+let giftOpened = false;
+
+giftBox.addEventListener(
+    "click",
+    function() {
+
+        if (giftOpened) {
+            return;
+        }
+
+        giftOpened = true;
+
+        giftBox.classList.add(
+            "gift-open"
+        );
+
+        setTimeout(
+            function() {
+
+                giftMessage.classList.add(
+                    "show"
+                );
+
+            },
+            600
+        );
+
+        launchFireworks();
+
+        for (
+            let i = 0;
+            i < 35;
+            i++
+        ) {
+
+            setTimeout(
+                createHeart,
+                i * 80
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   FIREWORKS
+========================================================= */
+
+const canvas =
+    document.getElementById(
+        "fireworks"
+    );
+
+const ctx =
+    canvas.getContext("2d");
+
+function resizeCanvas() {
+
+    canvas.width =
+        window.innerWidth;
+
+    canvas.height =
+        window.innerHeight;
+
+}
+
+resizeCanvas();
+
+window.addEventListener(
+    "resize",
+    resizeCanvas
+);
+
+
+let particles = [];
+
+
+function random(min, max) {
+
+    return Math.random()
+        * (max - min)
+        + min;
+
+}
+
+
+function createFirework(
+    x,
+    y
+) {
+
+    const count = 80;
+
+    for (
+        let i = 0;
+        i < count;
+        i++
+    ) {
+
+        const angle =
+            Math.random()
+            * Math.PI
+            * 2;
+
+        const speed =
+            random(
+                2,
+                8
+            );
+
+        particles.push({
+
+            x: x,
+
+            y: y,
+
+            vx:
+                Math.cos(angle)
+                * speed,
+
+            vy:
+                Math.sin(angle)
+                * speed,
+
+            life: 100,
+
+            size:
+                random(
+                    1,
+                    4
+                ),
+
+            gravity:
+                0.04
+
+        });
+
+    }
+
+}
+
+
+function drawFireworks() {
+
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+    particles.forEach(
+        function(particle) {
+
+            particle.x +=
+                particle.vx;
+
+            particle.y +=
+                particle.vy;
+
+            particle.vy +=
+                particle.gravity;
+
+            particle.life--;
+
+            ctx.beginPath();
+
+            ctx.arc(
+                particle.x,
+                particle.y,
+                particle.size,
+                0,
+                Math.PI * 2
+            );
+
+            ctx.fillStyle =
+                "rgba(255,100,170," +
+                particle.life / 100 +
+                ")";
+
+            ctx.fill();
+
+        }
+    );
+
+    particles =
+        particles.filter(
+            function(particle) {
+
+                return particle.life > 0;
+
+            }
+        );
+
+    requestAnimationFrame(
+        drawFireworks
+    );
+
+}
+
+drawFireworks();
+
+
+function launchFireworks() {
+
+    for (
+        let i = 0;
+        i < 10;
+        i++
+    ) {
+
+        setTimeout(
+            function() {
+
+                createFirework(
+                    random(
+                        100,
+                        canvas.width - 100
+                    ),
+                    random(
+                        100,
+                        canvas.height * 0.65
+                    )
+                );
+
+            },
+            i * 350
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   CLICK HEART EFFECT
+========================================================= */
+
+document.addEventListener(
+    "click",
+    function(event) {
+
+        const heart =
+            document.createElement(
+                "div"
+            );
+
+        heart.innerHTML = "💗";
+
+        heart.style.position =
+            "fixed";
+
+        heart.style.left =
+            event.clientX + "px";
+
+        heart.style.top =
+            event.clientY + "px";
+
+        heart.style.fontSize =
+            "25px";
+
+        heart.style.pointerEvents =
+            "none";
+
+        heart.style.zIndex =
+            "1001";
+
+        heart.style.transition =
+            "1s ease";
+
+        document.body.appendChild(
+            heart
+        );
+
+        setTimeout(
+            function() {
+
+                heart.style.transform =
+                    "translateY(-80px) scale(1.5)";
+
+                heart.style.opacity =
+                    "0";
+
+            },
+            20
+        );
+
+        setTimeout(
+            function() {
+
+                heart.remove();
+
+            },
+            1100
+        );
+
+    }
+);
+
+
+/* =========================================================
+   AUTO BACKGROUND FIREWORK
+========================================================= */
+
+setInterval(
+    function() {
+
+        if (
+            Math.random() > 0.55
+        ) {
+
+            createFirework(
+                random(
+                    100,
+                    canvas.width - 100
+                ),
+                random(
+                    80,
+                    canvas.height * 0.5
+                )
+            );
+
+        }
+
+    },
+    4500
+);
+
+
+/* =========================================================
+   CONSOLE MESSAGE
+========================================================= */
+
+console.log(
+    "💗 Chúc mẹ một sinh nhật thật hạnh phúc! 💗"
+);
+
+console.log(
+    "🌷 Mẹ luôn là người tuyệt vời nhất! 🌷"
+);
+
+
+/* =========================================================
+   END
+========================================================= */
+
+</script>
+
+</body>
+</html>
